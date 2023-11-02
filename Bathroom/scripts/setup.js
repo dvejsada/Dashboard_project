@@ -9,8 +9,9 @@ var next_bus_time;
 var current_time;
 var internal_temp;
 var internal_humidity;
+var bathroom_heating;
 
-// Setting up entities names - set id and entity name. Id 1 is reserved for call getting entitites states
+// Setting up entities names - set id and entity name. Id 1 is reserved for call getting entities states
 
 var entity_current_time = [2,"sensor.time"];
 var entity_current_outside_temp = [3,"sensor.openweathermaphourly_temperature"];
@@ -21,6 +22,7 @@ var entity_internal_humidity = [7,"sensor.everything_presence_one_6ea20c_humidit
 var entity_outside_rain_probability = [8,"sensor.openweathermapdaily_forecast_precipitation_probability"];
 var entity_moon_state = [9, "sensor.moon_phase"];
 var entity_uv_index = [10,"sensor.openweathermaphourly_uv_index"];
+var entity_bathroom_heating = [11,"sensor.bathroom_heating"];
 
 // Connection global variables
 var socket;

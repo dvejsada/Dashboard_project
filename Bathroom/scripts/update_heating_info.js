@@ -7,4 +7,11 @@ function updateHeatingInfo() {
     // Set outside rain probability value
     var span_internal_humidity = document.getElementById("internal_humidity_value");
     span_internal_humidity.innerText = String(Math.round(internal_humidity));
+
+    // Set heating info opacity
+    var opacity = bathroom_heating/100
+    if (opacity < 0.2) {
+        opacity = 0.2
+    }
+    document.getElementById("flame").style.opacity = opacity;
 }

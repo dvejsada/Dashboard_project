@@ -15,7 +15,7 @@ function connectHomeAssistant() {
         }
 
         if (response.type === 'auth_ok'){
-            console.log("Authorization was succesfull");
+            console.log("Authorization was successful");
             
             // Request all current states
             socket.send(JSON.stringify({"id": 1,"type": "get_states"}));
@@ -30,6 +30,7 @@ function connectHomeAssistant() {
             subscribeStateTrigger(entity_internal_humidity[0],entity_internal_humidity[1]);
             subscribeStateTrigger(entity_outside_rain_probability[0],entity_outside_rain_probability[1]);
             subscribeStateTrigger(entity_moon_state[0],entity_moon_state[1]);
+            subscribeStateTrigger(entity_bathroom_heating[0],entity_bathroom_heating[1]);
 
         }
         if (response.type === 'event'){

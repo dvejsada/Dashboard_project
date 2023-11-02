@@ -35,6 +35,10 @@ function handle_event_response(response) {
         uv_index = response.event.variables.trigger.to_state.state;
         updateWeatherInfo();
     }
+    if (response.id === 11){
+        bathroom_heating = response.event.variables.trigger.to_state.state;
+        updateHeatingInfo();
+    }
 }
 
 // Filter the initial received states and assign to corresponding variables
@@ -62,10 +66,13 @@ function filter_states(response) {
     uv_index = response["result"].filter(function (el) {return el.entity_id == entity_uv_index[1]})[0].state;
 
     // Filter internal temp
-   internal_temp = response["result"].filter(function (el) {return el.entity_id == entity_internal_temp[1]})[0].state;
+    internal_temp = response["result"].filter(function (el) {return el.entity_id == entity_internal_temp[1]})[0].state;
 
     // Filter internal humidity
     internal_humidity = response["result"].filter(function (el) {return el.entity_id == entity_internal_humidity[1]})[0].state;
+
+    // Filter bathroom heating
+    bathroom_heating = response["result"].filter(function (el) {return el.entity_id == entity_bathroom_heating[1]})[0].state;
 
     updateHeatingInfo();
     updateClock();
