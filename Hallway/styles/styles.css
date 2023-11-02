@@ -1,0 +1,223 @@
+@font-face {
+    font-family: "Clock";
+    src: url('fonts/clock.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+:root {
+    --primary-opacity: 90%;
+    --secodary-opacity: 70%;
+    --disabled-opacity: 40%;
+  }
+
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 480px;
+    height: 480px;
+    font-size: 35px;
+    font-family:"Roboto";
+    color: rgb(235, 235, 235);
+    position: fixed;
+}
+
+.section {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+}  
+
+#dashboard {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 480px;
+    width: 480px;
+    border-radius: 0;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #080808;
+
+}
+
+#weather_section {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 185px 65px 65px 65px 65px;
+    top: 10px;
+    left: 10px;
+    height: 460px;
+    width: 200px;
+}
+
+.weather_value {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 8px;
+}
+
+#weather_state {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 180px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#weather_image {
+    height: 210px;
+    width: 210px;
+}
+
+#weather_info img {
+    width: 60px;
+    height: 60px;
+}
+
+#outside_temperature {
+    display: grid;
+    grid-template-columns: 50px 80px 70px;
+    height: 65px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#temp_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#outside_max_temp {
+    display: grid;
+    grid-template-columns: 50px 80px 70px;
+    height: 65px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#outside_max_temp_img {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#outside_rain_prob {
+    display: grid;
+    grid-template-columns: 50px 80px 70px;
+    height: 65px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#rain_prob_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#outside_rain_amount {
+    display: grid;
+    grid-template-columns: 50px 80px 70px;
+    height: 65px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#outside_rain_amount_img {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#clock_section {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 220px;
+    height: 150px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    font-size: 110px;
+    font-family:"Clock";
+}
+
+#clock {
+    opacity: var(--primary-opacity);
+}
+
+#bus_section {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 23% 77%;
+    top: 170px;
+    left: 220px;
+    height: 60px;
+    width: 250px;
+    opacity: var(--primary-opacity);
+}
+
+
+#bus_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#bus_image img {
+    width: 50px;
+    height: 50px;
+}
+
+#bus_time {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#button_section {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 23% 77%;
+    top: 240px;
+    left: 220px;
+    height: 140px;
+    width: 250px;
+    opacity: var(--primary-opacity);
+}
+
+#alarm_section {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 23% 77%;
+    top: 390px;
+    left: 220px;
+    height: 80px;
+    width: 250px;
+    opacity: var(--primary-opacity);
+}

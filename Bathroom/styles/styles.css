@@ -1,0 +1,410 @@
+@font-face {
+    font-family: "Clock";
+    src: url('fonts/clock.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+:root {
+    --primary-opacity: 90%;
+    --secodary-opacity: 70%;
+    --disabled-opacity: 40%;
+  }
+
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 480px;
+    height: 480px;
+    font-size: 30px;
+    font-family:"Roboto";
+    color: rgb(235, 235, 235);
+    position: fixed;
+}
+
+.section {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+}  
+
+#dashboard {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 480px;
+    width: 480px;
+    border-radius: 0;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #080808;
+
+}
+
+#weather_section {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 180px 50px 50px ;
+    top: 10px;
+    left: 10px;
+    height: 280px;
+    width: 200px;
+}
+
+#weather_state {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 180px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#weather_image {
+    height: 200px;
+    width: 200px;
+}
+
+#outside_temperature {
+    display: grid;
+    grid-template-columns: 60px 70px 70px;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#temp_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#outside_rain_prob {
+    display: grid;
+    grid-template-columns: 60px 70px 70px;
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
+
+#rain_prob_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#rain_prob_value_wrapper, #temp_value_wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    padding-right: 5px;
+}
+
+#clock_section {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 220px;
+    height: 150px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    font-size: 110px;
+    font-family:"Clock";
+}
+
+#clock {
+    opacity: var(--primary-opacity);
+}
+
+#bus_section {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    top: 300px;
+    left: 10px;
+    height: 50px;
+    width: 200px;
+    opacity: var(--primary-opacity);
+}
+
+
+#bus_image {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#bus_time {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#radio_section {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 100px 70px;
+    top: 170px;
+    left: 220px;
+    height: 180px;
+    width: 250px;
+}
+
+#radio_images {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: 100px;
+    width: 250px;
+    justify-content: center;
+    align-content: center;
+}
+
+#radio_images img {
+    width: 65px;
+    height: 65px;
+    align-self: center;
+    justify-self: center;
+}
+
+#radio_images div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 70px;
+    height: 70px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#volume_selector {
+    display: flex;
+    height: 70px;
+    width: 250px;
+    justify-content: center;
+    align-content: center;
+}
+
+#volume_grid {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    height: 50px;
+    width: 200px;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
+}
+
+#volume_grid img {
+    width: 35px;
+    height: 35px;
+    align-self: center;
+    justify-self: center;
+}
+
+#vol_plus, #vol_minus  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 50px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#vol_text_frame  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80px;
+    height: 40px;
+    align-self: center;
+    justify-self: center;
+}
+
+#vol_text  {
+    align-self: center;
+    justify-self: center;
+}
+
+#heating_section {
+    position: absolute;
+    top: 360px;
+    left: 10px;
+    height: 110px;
+    width: 460px;
+}
+
+#heating_temp {
+    display: grid;
+    grid-template-columns: 220px 240px;
+    width: 460px;
+    height: 110px;
+}
+
+#heat_icons {
+    display: grid;
+    grid-template-columns: 33% 66% ;
+    width: 200px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+#flame_image {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 16%;
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-content: center; 
+}
+
+#flame_image img {
+    width: 50px;
+    height: 50px;
+}
+
+#internal_info {
+    display: grid;
+    grid-template-rows: 50% 50% ;
+    width: 135px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+#internal_temp {
+    display: grid;
+    grid-template-columns: 35% 30% 35% ;
+    width: 135px;
+    height: 55px;
+    align-items: end;
+    justify-content: center;
+}
+
+#internal_temp_img {
+    display: flex;
+    align-content: end;
+    justify-content: right;
+}
+
+#internal_humidity_img {
+    display: flex;
+    align-content: start;
+    justify-content: right;
+}
+
+#internal_info img {
+    width: 45px;
+    height: 45px;
+}
+
+#internal_humidity {
+    display: grid;
+    grid-template-columns: 35% 30% 35% ;
+    width: 135px;
+    height: 55px;
+    align-items: start;
+    justify-content: center;
+}
+
+#internal_temp_value_wrapper, #internal_humidity_value_wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#internal_temp_unit, #internal_humidity_unit {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#heating_choice {
+    display: grid;
+    grid-template-rows: 57px 53px;
+    width: 240px;
+    height: 110px;
+    justify-content: center;
+}
+
+#select_temp {
+    display: flex;
+    width: 240px;
+    align-items: center;
+    justify-content: center;
+}
+
+#temp_selection {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    width: 216px;
+    align-self: end;
+}
+
+#temp_selection::-webkit-slider-runnable-track {
+    background: #f7b80c;
+    height: 15px;
+    border-radius: 16px;
+}
+
+#temp_selection::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -5px; /* Centers thumb on the track */
+    background-color: #c4460c;
+    height: 25px;
+    width: 25px;  
+    border-radius: 16px;  
+}
+
+#temp_datalist {
+    display: flex;
+    width: 240px;
+    align-self: start;
+    align-items: center;
+    justify-content: center;
+}
+
+#tickmarks {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, 28px);
+    width: 216px;
+    left: 1px;
+    top: 4px;
+    font-size: 14px;
+}
+

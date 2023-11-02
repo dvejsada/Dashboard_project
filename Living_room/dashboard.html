@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!--All weather images used in this dashboard were created by Bas Milius (https://github.com/basmilius/weather-icons) under MIT Licence-->
+    <div id="dashboard">
+        <div class="section" id="weather_section">
+
+            <div id="weather_state">
+                <img id="weather_image" src="img/not-available.svg">
+            </div>
+
+            <div id="outside_temperature">
+                <div id="temp_image">
+                    <img src="img/thermometer.svg" width="45" height="45">
+                </div>
+                <div id="temp_value_wrapper">
+                    <span id="temp_value"></span>
+                </div>
+                <div>
+                    <span>°C</span>
+                </div>
+            </div>
+
+            <div id="outside_rain_prob">
+                <div id="rain_prob_image">
+                    <img src="img/raindrops.svg" width="45" height="45">
+                </div>
+                <div id="rain_prob_value_wrapper">
+                    <span id="rain_prob_value"></span>
+                </div>
+                <div>            
+                    <span>%</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section" id="clock_section">
+            <span id="clock"></span>
+        </div>
+
+        <div class="section" id="lights_section">
+            <div class="img_wrapper">
+                <img src="img/down-arrow.svg">
+            </div>
+            <div class="text_wrapper">
+                <span>Světlo</span>
+            </div>
+        </div>
+
+        <div class="section" id="namedays_section">
+            <div class="text_wrapper">
+                <span>Svátek dnes:</span>
+            </div>
+            <div class="text_wrapper">
+                <span id="today_nameday"></span>
+            </div>
+        </div>
+
+        <div class="section" id="covers_section">
+            <div class="img_wrapper">
+                <img src="img/down-arrow.svg">
+            </div>
+            <div class="text_wrapper">
+                <span>Rolety</span>
+            </div>
+        </div>
+
+        <div class="section" id="heating_section">
+            <div id="heating_temp">
+                <div id="heat_icons">
+                    <div id="flame_image_wrapper">
+                        <div id="flame_image">
+                            <img id="flame" src="img/flame.svg">
+                        </div>
+                    </div>
+                    <div id="internal_info">
+                        <div id="internal_temp">
+                            <div id="internal_temp_img">
+                                <img src="img/thermometer.svg">
+                            </div>
+                            <div id="internal_temp_value_wrapper">
+                                <span id="internal_temp_value">24</span>
+                            </div>
+                            <div id="internal_temp_unit">
+                                <span>°C</span>
+                            </div>
+                        </div>
+                        <div id="internal_humidity">
+                            <div id="internal_humidity_img">
+                                <img src="img/humidity.svg">
+                            </div>
+                            <div id="internal_humidity_value_wrapper">
+                                <span id="internal_humidity_value">45</span>
+                            </div>
+                            <div id="internal_humidity_unit">
+                                <span>%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                            </div>
+        </div>
+
+        <div class="section" id="button_section">
+            <div id="button_wrapper">
+                <div class="img_wrapper" id="button_guest">
+                    <img src="img/sleep.svg">
+                </div>
+                <div class="img_wrapper" id="button_clean">
+                    <img src="img/cleaning.svg">
+                </div>
+                <div class="img_wrapper" id="button_tv">
+                    <img src="img/television.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/secrets.js"></script>
+    <script src="scripts/setup.js"></script>
+    <script src="scripts/event_listeners.js"></script>
+    <script src="scripts/update_nameday.js"></script>
+    <script src="scripts/update_bus_info.js"></script>
+    <script src="scripts/update_weather_info.js"></script>
+    <script src="scripts/update_clock.js"></script>
+    <script src="scripts/update_heating_info.js"></script>
+    <script src="scripts/update_buttons.js"></script>
+    <script src="scripts/event_handler.js"></script>
+    <script src="scripts/ha_connection.js"></script>
+</body>
+</html>

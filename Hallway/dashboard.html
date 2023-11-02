@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="dashboard">
+        <div class="section" id="weather_section">
+
+            <div id="weather_state">
+                <img id="weather_image" src="img/not-available.svg">
+            </div>
+            <div id="weather_info">
+                <div id="outside_temperature">
+                    <div id="temp_image">
+                        <img src="img/thermometer.svg" >
+                    </div>
+                    <div class="weather_value">
+                        <span id="temp_value"></span>
+                    </div>
+                    <div>
+                        <span>°C</span>
+                    </div>
+                </div>
+
+                <div id="outside_max_temp">
+                    <div id="outside_max_temp_img">
+                        <img src="img/thermometer-warmer.svg">
+                    </div>
+                    <div class="weather_value">
+                        <span id="outside_max_temp_value"></span>
+                    </div>
+                    <div>            
+                        <span>°C</span>
+                    </div>
+                </div>
+                <div id="outside_rain_prob">
+                    <div id="rain_prob_image">
+                        <img src="img/raindrops.svg">
+                    </div>
+                    <div class="weather_value">
+                        <span id="rain_prob_value"></span>
+                    </div>
+                    <div>            
+                        <span>%</span>
+                    </div>
+                </div>
+                <div id="outside_rain_amount">
+                    <div id="outside_rain_amount_img">
+                        <img src="img/raindrop.svg">
+                    </div>
+                    <div class="weather_value">
+                        <span id="outside_rain_amount_value"></span>
+                    </div>
+                    <div>            
+                        <span>mm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="clock_section">
+            <span id="clock"></span>
+        </div>
+
+        <div class="section" id="bus_section">
+            <div id="bus_image">
+                <img src="img/bus-station.png">
+            </div>
+            <div id="bus_time">
+                <span id="bus_time_value"></span>
+            </div>
+        </div>
+        <div class="section" id="button_section">
+            <div id="">
+                
+            </div>
+            <div id="">
+                
+            </div>
+        </div>
+        <div class="section" id="alarm_section">
+            <div id="">
+                
+            </div>
+            <div id="">
+                
+            </div>
+        </div>
+
+    </div>
+    <script src="scripts/secrets.js"></script>
+    <script src="scripts/setup.js"></script>
+    <script src="scripts/event_listeners.js"></script>
+    <script src="scripts/update_clock.js"></script>
+    <script src="scripts/update_bus_info.js"></script>
+    <script src="scripts/update_weather_info.js"></script>
+    <script src="scripts/event_handler.js"></script>
+    <script src="scripts/ha_connection.js"></script>
+</body>
+</html>
