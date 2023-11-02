@@ -10,7 +10,7 @@
 
 :root {
     --primary-opacity: 90%;
-    --secodary-opacity: 70%;
+    --secondary-opacity: 70%;
     --disabled-opacity: 40%;
   }
 
@@ -261,7 +261,7 @@ body {
 
 #heating_temp {
     display: grid;
-    grid-template-columns: 220px 240px;
+    grid-template-columns: 240px 220px;
     width: 460px;
     height: 110px;
 }
@@ -280,9 +280,6 @@ body {
     display: flex;
     width: 60px;
     height: 60px;
-    border-radius: 16%;
-    background-color: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-items: center;
     justify-content: center; 
 }
@@ -359,52 +356,56 @@ body {
     justify-content: center;
 }
 
-#select_temp {
+#temp_selector {
     display: flex;
+    height: 110px;
     width: 240px;
-    align-items: center;
     justify-content: center;
+    align-content: center;
 }
 
-#temp_selection {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    width: 216px;
-    align-self: end;
-}
-
-#temp_selection::-webkit-slider-runnable-track {
-    background: #f7b80c;
-    height: 15px;
-    border-radius: 16px;
-}
-
-#temp_selection::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -5px; /* Centers thumb on the track */
-    background-color: #c4460c;
-    height: 25px;
-    width: 25px;  
-    border-radius: 16px;  
-}
-
-#temp_datalist {
-    display: flex;
-    width: 240px;
-    align-self: start;
-    align-items: center;
-    justify-content: center;
-}
-
-#tickmarks {
-    position: relative;
+#temp_grid {
     display: grid;
-    grid-template-columns: repeat(8, 28px);
-    width: 216px;
-    left: 1px;
-    top: 4px;
-    font-size: 14px;
+    grid-template-columns: 30% 40% 30%;
+    height: 50px;
+    width: 220px;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    justify-self: center;
 }
 
+#temp_grid img {
+    width: 35px;
+    height: 35px;
+    align-self: center;
+    justify-self: center;
+}
+
+#temp_plus, #temp_minus  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 50px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#temp_text_frame  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80px;
+    height: 40px;
+    align-self: center;
+    justify-self: center;
+}
+
+#temp_text  {
+    align-self: center;
+    justify-self: center;
+}
