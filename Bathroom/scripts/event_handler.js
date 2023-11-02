@@ -39,6 +39,11 @@ function handle_event_response(response) {
         bathroom_heating = response.event.variables.trigger.to_state.state;
         updateHeatingInfo();
     }
+    if (response.id === 12){
+        heating_mode = response.event.variables.trigger.to_state.state;
+        heating_target_temp = response.event.variables.trigger.to_state.attributes.temperature;
+        updateHeatingInfo();
+    }
 }
 
 // Filter the initial received states and assign to corresponding variables
@@ -73,6 +78,10 @@ function filter_states(response) {
 
     // Filter bathroom heating
     bathroom_heating = response["result"].filter(function (el) {return el.entity_id == entity_bathroom_heating[1]})[0].state;
+
+    // Filter bathroom heating mode and preset temperature
+    heating_mode = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].state
+    heating_target_temp = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].attributes.temperature;
 
     updateHeatingInfo();
     updateClock();
