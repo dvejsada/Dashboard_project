@@ -2,9 +2,9 @@
 
 Custom HTML based dashboards for NSPanel Pro from Sonoff to connect to Home Assistant instance. This is a custom solution based primarily on my needs in different rooms, so for your use it needs to be adapted to your situations, needs and entities available (HTML/JS/CSS knowledge required).
 
-| Living Room  | Bathroom | Hallway |
-| ------------- | ------------- | ------------- |
-| ![Screenshot](screenshot_living_room.png?raw=false "Living Room")  | ![Screenshot](screenshot_bathroom.png?raw=false "Bathroom")  | ![Screenshot](screenshot_hallway.png?raw=false "Hallway")  |
+| Living Room                                                       | Bathroom                                                    | Hallway                                                   |
+|-------------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
+| ![Screenshot](screenshot_living_room.png?raw=false "Living Room") | ![Screenshot](screenshot_bathroom.png?raw=false "Bathroom") | ![Screenshot](screenshot_hallway.png?raw=false "Hallway") |
 
 
 ## What do you need?
