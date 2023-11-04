@@ -3,6 +3,8 @@ document.getElementById("fajn_img").addEventListener("click", play_Fajn);
 document.getElementById("city_img").addEventListener("click", play_City);
 document.getElementById("vol_plus").addEventListener("click", vol_up);
 document.getElementById("vol_minus").addEventListener("click", vol_down);
+document.getElementById("temp_plus").addEventListener("click", (evt) => temp_change("up"));
+document.getElementById("temp_minus").addEventListener("click", (evt) => temp_change("down"));
 
 function play_E2() {
     domain = "media_player"
@@ -41,5 +43,23 @@ function vol_down() {
     service = "volume_down"
     entity = "media_player.obyvak_speaker"
     data = {}
+    callService(entity, service, domain, data);
+}
+
+function temp_change(change) {
+
+    var new_temp
+
+    if (change == "up") {
+        new_temp = heating_target_temp + 0.5
+    }
+    else {
+        new_temp = heating_target_temp - 0.5
+    }
+
+    domain = "climate"
+    service = "set_temperature"
+    entity = "climate.bathroom"
+    data = {temperature: new_temp}
     callService(entity, service, domain, data);
 }

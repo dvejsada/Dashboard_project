@@ -83,6 +83,7 @@ function filter_states(response) {
     heating_mode = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].state
     heating_target_temp = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].attributes.temperature;
 
+    // Calls functions to update the dashboard
     updateHeatingInfo();
     updateClock();
     updateBusInfo();
