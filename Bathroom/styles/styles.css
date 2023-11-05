@@ -440,3 +440,10 @@ body {
     justify-content: right;
     opacity: var(--primary-opacity);
 }
+
+#temp_unit_frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--primary-opacity);
+}
