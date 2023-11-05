@@ -264,7 +264,7 @@ body {
 
 #heating_temp {
     display: grid;
-    grid-template-columns: 250px 210px;
+    grid-template-columns: 260px 200px;
     width: 460px;
     height: 110px;
 }
@@ -272,7 +272,7 @@ body {
 #heat_icons {
     display: grid;
     grid-template-columns: 33% 66% ;
-    width: 200px;
+    width: 180px;
     height: 110px;
     align-items: center;
     justify-content: center;
@@ -376,15 +376,15 @@ body {
     align-self: center;
     justify-self: center;
     border-radius: 16px;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgba(255, 255, 255, 0.08);
 }
 
 #cal_img_wrapper img {
-    width: 40px;
-    height 40px;
+    width: 45px;
+    height 45px;
     opacity: var(--primary-opacity);
 }
 

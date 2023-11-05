@@ -25,4 +25,13 @@ function updateHeatingInfo() {
         document.getElementById("temp_text").innerText = heating_target_temp;
     }
 
+    if (heating_mode == "auto") {
+        document.getElementById("cal_img_wrapper").style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+        document.getElementById("cal_img").style.opacity = "1";
+    }
+    else {
+        document.getElementById("cal_img_wrapper").style.backgroundColor = "rgba(255, 255, 255, 0.08)";
+        document.getElementById("cal_img").style.opacity = "0.9";
+    }
+
 }
