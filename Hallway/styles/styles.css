@@ -206,18 +206,17 @@ body {
     grid-template-columns: 23% 77%;
     top: 240px;
     left: 220px;
-    height: 140px;
+    height: 230px;
     width: 250px;
     opacity: var(--primary-opacity);
 }
 
-#alarm_section {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 23% 77%;
-    top: 390px;
-    left: 220px;
-    height: 80px;
+#deer_wrapper {
+    display: flex;
+    height: 230px;
     width: 250px;
-    opacity: var(--primary-opacity);
+    align-items: center;
+    justify-content: center;
 }
+
+
