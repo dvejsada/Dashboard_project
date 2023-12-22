@@ -100,6 +100,9 @@ function updateWeatherInfo() {
         default:
             console.log("Invalid weather state");
     }
+    // Set max temp value
+    var span_outside_max_temp = document.getElementById("outside_max_temp_value");
+    span_outside_max_temp.innerText = String(Math.round(max_outside_temp*10)/10);
 
     // Set current temp value
     var span_outside_current_temp = document.getElementById("temp_value");
@@ -108,5 +111,9 @@ function updateWeatherInfo() {
     // Set outside rain probability value
     var span_prec_prob = document.getElementById("rain_prob_value");
     span_prec_prob.innerText = String(outside_rain_probability);
+
+    // Set outside rain amount value
+    var span_prec_amount = document.getElementById("outside_rain_amount_value");
+    span_prec_amount.innerText = String(outside_rain_amount);
 
 }
