@@ -12,6 +12,7 @@ var internal_humidity;
 var bathroom_heating;
 var heating_target_temp;
 var heating_mode;
+var sun_state;
 
 // Setting up entities names - set id and entity name. Id 1 is reserved for call getting entities states
 
@@ -26,6 +27,7 @@ var entity_moon_state = [9, "sensor.moon_phase"];
 var entity_uv_index = [10,"sensor.openweathermaphourly_uv_index"];
 var entity_bathroom_heating = [11,"sensor.bathroom_heating"];
 var entity_heating_target_temp = [12,"climate.bathroom"];
+var entity_sun_state = [13,"sun.sun"];
 
 // Connection global variables
 var socket;

@@ -32,6 +32,7 @@ function connectHomeAssistant() {
             subscribeStateTrigger(entity_moon_state[0],entity_moon_state[1]);
             subscribeStateTrigger(entity_bathroom_heating[0],entity_bathroom_heating[1]);
             subscribeStateTrigger(entity_heating_target_temp[0],entity_heating_target_temp[1]);
+            subscribeStateTrigger(entity_sun_state[0],entity_sun_state[1]);
 
         }
         if (response.type === 'event'){

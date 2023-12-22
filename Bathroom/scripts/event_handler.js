@@ -44,6 +44,10 @@ function handle_event_response(response) {
         heating_target_temp = response.event.variables.trigger.to_state.attributes.temperature;
         updateHeatingInfo();
     }
+    if (response.id === 13){
+        sun_state = response.event.variables.trigger.to_state.state;
+        updateWeatherInfo();
+    }
 }
 
 // Filter the initial received states and assign to corresponding variables
@@ -82,6 +86,9 @@ function filter_states(response) {
     // Filter bathroom heating mode and preset temperature
     heating_mode = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].state
     heating_target_temp = response["result"].filter(function (el) {return el.entity_id == entity_heating_target_temp[1]})[0].attributes.temperature;
+
+    // Filter sun state
+    sun_state = response["result"].filter(function (el) {return el.entity_id == entity_sun_state[1]})[0].state;
 
     // Calls functions to update the dashboard
     updateHeatingInfo();
