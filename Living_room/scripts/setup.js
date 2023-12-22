@@ -14,6 +14,7 @@ var living_room_heating;
 var guest_mode;
 var cleaning_mode;
 var living_room_tv;
+var sun_state;
 
 // Setting up entities names - set id and entity name. Id 1 is reserved for call getting entitites states
 
@@ -30,6 +31,7 @@ var entity_today_nameday = [11,"sensor.svatky_a_narozeniny"];
 var entity_guest_mode = [12,"input_boolean.guest_mode"];
 var entity_cleaning_mode = [13,"input_boolean.cleaning_mode"];
 var entity_living_room_tv = [14,"media_player.living_room_tv_3"];
+var entity_sun_state = [15,"sun.sun"];
 
 // Connection global variables
 var socket;

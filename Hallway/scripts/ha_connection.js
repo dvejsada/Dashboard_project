@@ -30,6 +30,7 @@ function connectHomeAssistant() {
             subscribeStateTrigger(entity_max_outside_temp[0],entity_max_outside_temp[1]);
             subscribeStateTrigger(entity_outside_rain_probability[0],entity_outside_rain_probability[1]);
             subscribeStateTrigger(entity_moon_state[0],entity_moon_state[1]);
+            subscribeStateTrigger(entity_sun_state[0],entity_sun_state[1]);
 
         }
         if (response.type === 'event'){

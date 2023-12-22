@@ -9,6 +9,7 @@ var moon_state;
 var uv_index;
 var next_bus_time;
 var current_time;
+var sun_state;
 
 // Setting up entities names - set id and entity name. Id 1 is reserved for call getting entitites states
 
@@ -21,6 +22,7 @@ var entity_max_outside_temp = [7,"sensor.openweathermapdaily_forecast_temperatur
 var entity_outside_rain_probability = [8,"sensor.openweathermapdaily_forecast_precipitation_probability"];
 var entity_moon_state = [9, "sensor.moon_phase"];
 var entity_uv_index = [10,"sensor.openweathermaphourly_uv_index"];
+var entity_sun_state = [11,"sun.sun"];
 
 // Connection global variables
 var socket;

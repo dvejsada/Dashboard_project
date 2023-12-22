@@ -35,6 +35,10 @@ function handle_event_response(response) {
         uv_index = response.event.variables.trigger.to_state.state;
         updateWeatherInfo();
     }
+    if (response.id === 11){
+        sun_state = response.event.variables.trigger.to_state.state;
+        updateWeatherInfo();
+    }
 }
 
 // Filter the initial received states and assign to corresponding variables
@@ -66,6 +70,9 @@ function filter_states(response) {
 
     // Filter moon phase
     uv_index = response["result"].filter(function (el) {return el.entity_id == entity_uv_index[1]})[0].state;
+
+    // Filter sun state
+    sun_state = response["result"].filter(function (el) {return el.entity_id == entity_sun_state[1]})[0].state;
 
     updateClock();
     updateBusInfo();

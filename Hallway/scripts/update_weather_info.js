@@ -38,7 +38,12 @@ function updateWeatherInfo() {
             weatherImage.src = basePath + "cloudy.svg";
             break;
         case 'fog':
-            weatherImage.src = basePath + "fog-day.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "fog-day.svg";
+            }
+            else {
+                weatherImage.src = basePath + "fog-night.svg";
+            }
             break;
         case 'hail':
             weatherImage.src = basePath + "hail.svg";
@@ -47,13 +52,28 @@ function updateWeatherInfo() {
             weatherImage.src = basePath + "lightning.svg";
             break;
         case 'lightning-rainy':
-            weatherImage.src = basePath + "thunderstorms-rain.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "thunderstorms-rain.svg";
+                }
+            else {
+                weatherImage.src = basePath + "thunderstorms-night.svg";
+            }
             break;
         case 'partlycloudy':
-            weatherImage.src = basePath + "partly-cloudy-day.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "partly-cloudy-day.svg";
+                }
+            else {
+                weatherImage.src = basePath + "partly-cloudy-night.svg";
+            }
             break;
         case 'pouring':
-            weatherImage.src = basePath + "extreme-rain.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "extreme-rain.svg";
+                }
+            else {
+                weatherImage.src = basePath + "extreme-night-rain.svg";
+            }
             break;
         case 'rainy':
             weatherImage.src = basePath + "rain.svg";
@@ -66,7 +86,7 @@ function updateWeatherInfo() {
             break;
         case 'sunny':
             // Set image with uv index
-            weatherImage.src = basePath + "uv-index-" + String(rounded_uv_index) + ".svg";   
+            weatherImage.src = basePath + "uv-index-" + String(rounded_uv_index) + ".svg";
             break;
         case 'windy':
             weatherImage.src = basePath + "wind.svg";
@@ -85,15 +105,8 @@ function updateWeatherInfo() {
     var span_outside_current_temp = document.getElementById("temp_value");
     span_outside_current_temp.innerText = String(Math.round(current_outside_temp*10)/10);
 
-    // Set max temp value
-    var span_outside_max_temp = document.getElementById("outside_max_temp_value");
-    span_outside_max_temp.innerText = String(Math.round(max_outside_temp*10)/10);
-
     // Set outside rain probability value
     var span_prec_prob = document.getElementById("rain_prob_value");
     span_prec_prob.innerText = String(outside_rain_probability);
 
-    // Set outside rain amount value
-    var span_prec_amount = document.getElementById("outside_rain_amount_value");
-    span_prec_amount.innerText = String(outside_rain_amount);
 }

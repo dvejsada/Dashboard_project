@@ -54,6 +54,10 @@ function handle_event_response(response) {
         living_room_tv = response.event.variables.trigger.to_state.state;
         updateButtons();
     }
+    if (response.id === 15){
+        sun_state = response.event.variables.trigger.to_state.state;
+        updateWeatherInfo();
+    }
 }
 
 // Filter the initial received states and assign to corresponding variables
@@ -97,6 +101,9 @@ function filter_states(response) {
 
     // Filter living room tv
     living_room_tv = response["result"].filter(function (el) {return el.entity_id == entity_living_room_tv[1]})[0].state;
+
+    // Filter sun state
+    sun_state = response["result"].filter(function (el) {return el.entity_id == entity_sun_state[1]})[0].state;
 
     updateHeatingInfo();
     updateClock();

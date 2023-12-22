@@ -35,6 +35,7 @@ function connectHomeAssistant() {
             subscribeStateTrigger(entity_guest_mode[0],entity_guest_mode[1]);
             subscribeStateTrigger(entity_cleaning_mode[0],entity_cleaning_mode[1]);
             subscribeStateTrigger(entity_living_room_tv[0],entity_living_room_tv[1]);
+            subscribeStateTrigger(entity_sun_state[0],entity_sun_state[1]);
         }
         if (response.type === 'event'){
             handle_event_response(response);
