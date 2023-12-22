@@ -38,7 +38,12 @@ function updateWeatherInfo() {
             weatherImage.src = basePath + "cloudy.svg";
             break;
         case 'fog':
-            weatherImage.src = basePath + "fog-day.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "fog-day.svg";
+            }
+            else {
+                weatherImage.src = basePath + "fog-night.svg";
+            }
             break;
         case 'hail':
             weatherImage.src = basePath + "hail.svg";
@@ -47,13 +52,28 @@ function updateWeatherInfo() {
             weatherImage.src = basePath + "lightning.svg";
             break;
         case 'lightning-rainy':
-            weatherImage.src = basePath + "thunderstorms-rain.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "thunderstorms-rain.svg";
+                }
+            else {
+                weatherImage.src = basePath + "thunderstorms-night.svg";
+            }
             break;
         case 'partlycloudy':
-            weatherImage.src = basePath + "partly-cloudy-day.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "partly-cloudy-day.svg";
+                }
+            else {
+                weatherImage.src = basePath + "partly-cloudy-night.svg";
+            }
             break;
         case 'pouring':
-            weatherImage.src = basePath + "extreme-rain.svg";
+            if (sun_state === "above_horizon"){
+                weatherImage.src = basePath + "extreme-rain.svg";
+                }
+            else {
+                weatherImage.src = basePath + "extreme-night-rain.svg";
+            }
             break;
         case 'rainy':
             weatherImage.src = basePath + "rain.svg";
