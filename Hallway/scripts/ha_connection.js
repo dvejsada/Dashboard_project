@@ -15,7 +15,7 @@ function connectHomeAssistant() {
         }
 
         if (response.type === 'auth_ok'){
-            console.log("Authorization was succesfull");
+            console.log("Authorization was successful");
             
             // Request all current states
             socket.send(JSON.stringify({"id": 1,"type": "get_states"}));

@@ -11,7 +11,7 @@ var next_bus_time;
 var current_time;
 var sun_state;
 
-// Setting up entities names - set id and entity name. Id 1 is reserved for call getting entitites states
+// Setting up entities names - set id and entity name. Id 1 is reserved for call getting all entities states
 
 var entity_current_time = [2,"sensor.time"];
 var entity_current_outside_temp = [3,"sensor.openweathermaphourly_temperature"];
