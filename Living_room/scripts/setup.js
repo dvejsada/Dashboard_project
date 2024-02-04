@@ -20,10 +20,10 @@ var sun_state;
 
 var entity_current_time = [2,"sensor.time"];
 var entity_current_outside_temp = [3,"sensor.openweathermaphourly_temperature"];
-var entity_internal_temp = [4,"sensor.obyvak_teplota"]
+var entity_internal_temp = [4,"sensor.teplotni_sensor_obyvak_temperature"]
 var entity_weather_state = [5,"sensor.openweathermaphourly_condition"];
 var entity_livingroom_heating = [6,"sensor.living_room_heating"];
-var entity_internal_humidity = [7,"sensor.obyvak_vlhkost"]
+var entity_internal_humidity = [7,"sensor.teplotni_sensor_obyvak_humidity"]
 var entity_outside_rain_probability = [8,"sensor.openweathermapdaily_forecast_precipitation_probability"];
 var entity_moon_state = [9, "sensor.moon_phase"];
 var entity_uv_index = [10,"sensor.openweathermaphourly_uv_index"];
